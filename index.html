@@ -1601,73 +1601,376 @@ footer p {
             What learners say.
         </h2>
 
-        <p class="section-subtitle">
-            Add your genuine student feedback here to help future
-            learners understand what the experience is like.
-        </p>
+       <!-- ================= STUDENT REVIEWS ================= -->
+<section class="reviews-section" id="reviews">
 
+  <div class="section-heading">
+    <span class="eyebrow">REAL STUDENT EXPERIENCES</span>
+    <h2>What My Students Say</h2>
+    <p>
+      Real feedback from students who have worked on their
+      English, fluency and confidence.
+    </p>
+  </div>
 
-        <div class="trust-grid">
+  <div class="reviews-grid">
 
-            <div class="trust-card">
-
-                <div class="stars">★★★★★</div>
-
-                <p>
-                    “Add a genuine review from one of your students here.
-                    Keep it specific about the improvement they experienced.”
-                </p>
-
-                <strong>
-                    — Student Name
-                </strong>
-
-            </div>
-
-
-            <div class="trust-card">
-
-                <div class="stars">★★★★★</div>
-
-                <p>
-                    “Add another genuine student experience here,
-                    preferably mentioning speaking confidence,
-                    grammar or workplace communication.”
-                </p>
-
-                <strong>
-                    — Student Name
-                </strong>
-
-            </div>
-
-
-            <div class="trust-card">
-
-                <div class="stars">★★★★★</div>
-
-                <p>
-                    “Add a genuine testimonial here about the
-                    practical learning experience and live classes.”
-                </p>
-
-                <strong>
-                    — Student Name
-                </strong>
-
-            </div>
-
+    <!-- REVIEW 1 -->
+    <div class="review-card">
+      <div class="review-name">
+        <div class="review-avatar">N</div>
+        <div>
+          <h3>Nitya</h3>
+          <div class="stars">★★★★★</div>
         </div>
+      </div>
 
-        <p class="testimonial-note">
-            Replace the three sample review spaces above with real student
-            feedback and the students' names before publishing.
-        </p>
-
+      <div class="review-image-wrapper">
+        <img
+          src="review1.jpeg"
+          alt="Nitya's review of Speakifly"
+          loading="lazy"
+        >
+      </div>
     </div>
+
+
+    <!-- REVIEW 2 -->
+    <div class="review-card">
+      <div class="review-name">
+        <div class="review-avatar">S</div>
+        <div>
+          <h3>Student Review</h3>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-image-wrapper">
+        <img
+          src="review2.jpeg"
+          alt="Student review of Speakifly"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+
+    <!-- REVIEW 3 -->
+    <div class="review-card">
+      <div class="review-name">
+        <div class="review-avatar">S</div>
+        <div>
+          <h3>Student Review</h3>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-image-wrapper">
+        <img
+          src="review3.jpeg"
+          alt="Student review of Speakifly"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+
+    <!-- REVIEW 4 -->
+    <div class="review-card">
+      <div class="review-name">
+        <div class="review-avatar">J</div>
+        <div>
+          <h3>Jignesh Bathvar</h3>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-image-wrapper">
+        <img
+          src="review4.jpeg"
+          alt="Jignesh Bathvar and Mayaben Jadav reviews"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="additional-review-name">
+        <span>Also featuring</span>
+        <strong>Mayaben Jadav</strong>
+      </div>
+    </div>
+
+
+    <!-- REVIEW 5 -->
+    <div class="review-card">
+      <div class="review-name">
+        <div class="review-avatar">P</div>
+        <div>
+          <h3>Priyansh</h3>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="review-image-wrapper">
+        <img
+          src="review5.jpeg"
+          alt="Priyansh's review of Speakifly"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+  </div>
+
+  <div class="reviews-bottom">
+    <div class="reviews-rating">
+      <strong>5.0</strong>
+      <span>★★★★★</span>
+      <p>Trusted by students for Spoken English & IELTS coaching</p>
+    </div>
+  </div>
 
 </section>
 
+
+<!-- ================= REVIEW SECTION CSS ================= -->
+
+<style>
+
+.reviews-section {
+  padding: 80px 20px;
+  background: #f8faff;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #1769aa;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  color: #111827;
+}
+
+.section-heading p {
+  margin: 16px auto 0;
+  max-width: 620px;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* REVIEW GRID */
+
+.reviews-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+
+/* REVIEW CARD */
+
+.review-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e8eef6;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.12);
+}
+
+
+/* NAME */
+
+.review-name {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #eaf4ff;
+  color: #1769aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.review-name h3 {
+  margin: 0 0 3px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.stars {
+  color: #f5a623;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+
+/* IMAGE */
+
+.review-image-wrapper {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.review-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+}
+
+
+/* EXTRA NAME */
+
+.additional-review-name {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #f7fafc;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.additional-review-name strong {
+  color: #111827;
+  margin-left: 5px;
+}
+
+
+/* BOTTOM RATING */
+
+.reviews-bottom {
+  max-width: 600px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.reviews-rating {
+  background: white;
+  border: 1px solid #e8eef6;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.reviews-rating strong {
+  font-size: 30px;
+  color: #111827;
+  margin-right: 8px;
+}
+
+.reviews-rating span {
+  color: #f5a623;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.reviews-rating p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .reviews-section {
+    padding: 55px 14px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .section-heading p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .review-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .review-name {
+    margin-bottom: 13px;
+  }
+
+  .review-avatar {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    font-size: 17px;
+  }
+
+  .review-name h3 {
+    font-size: 17px;
+  }
+
+  .stars {
+    font-size: 15px;
+  }
+
+  .review-image-wrapper {
+    border-radius: 12px;
+  }
+
+  .review-image-wrapper img {
+    max-height: none;
+  }
+
+  .reviews-rating {
+    padding: 17px;
+  }
+
+}
+
+</style>
 
 <!-- =========================
      PRICE / CTA
