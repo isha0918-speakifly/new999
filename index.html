@@ -4,156 +4,297 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Speakifly - English Communication for Professionals</title>
-  <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* HIGH-CONVERTING CUSTOM CSS */
+    :root {
+      --primary-color: #0F172A; /* Deep professional navy */
+      --accent-color: #E11D48; /* High-conversion red/pink */
+      --accent-hover: #BE123C;
+      --bg-color: #F8FAFC;
+      --text-main: #334155;
+      --text-light: #64748B;
+      --success: #16A34A;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Typography */
+    h1, h2, h3 { color: var(--primary-color); font-weight: 800; line-height: 1.2; }
+    h1 { font-size: 3rem; margin-bottom: 1rem; }
+    h1 span { color: var(--accent-color); }
+    h2 { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
+    p { font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light); }
+
+    /* Layout & Sections */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 80px 0; }
+    
+    /* Navbar */
+    header {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav img { height: 40px; }
+    
+    /* Buttons */
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px 0 rgba(225, 29, 72, 0.39);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      max-width: 350px;
+    }
+    .cta-button:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px 0 rgba(225, 29, 72, 0.5);
+    }
+    .guarantee-text {
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--success);
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background: white;
+    }
+    .hero-content { flex: 1; }
+    .hero-image { flex: 1; text-align: right; position: relative; }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    }
+
+    /* Urgency Banner */
+    .urgency-box {
+      background: #FEF2F2;
+      border: 2px solid #FCA5A5;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 25px 0;
+    }
+    .urgency-box p { margin: 5px 0; color: #991B1B; font-size: 1.05rem; }
+    .urgency-box strong { color: #7F1D1D; }
+
+    /* Features Grid */
+    .features { background: var(--primary-color); color: white; padding: 60px 0; }
+    .features h2 { color: white; }
+    .features p { color: #CBD5E1; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .card h3 { color: white; margin-bottom: 10px; font-size: 1.3rem; }
+
+    /* Trainer Section */
+    .trainer {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      background: white;
+    }
+    .trainer img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      text-align: center;
+      background: white;
+      border-radius: 16px;
+      padding: 60px 40px;
+      margin: 80px auto;
+      max-width: 600px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+      border: 1px solid #E2E8F0;
+    }
+    .price-tag { font-size: 4rem; font-weight: 900; color: var(--primary-color); margin: 20px 0; }
+    .price-tag span { font-size: 1.5rem; color: var(--text-light); }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero, .trainer { flex-direction: column; text-align: center; }
+      .hero-image { text-align: center; }
+      h1 { font-size: 2.2rem; }
+      .cta-button { width: 100%; }
+      .urgency-box { text-align: left; }
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <nav>
-      <a href="#top">
-        <img alt="Speakifly" src="logo.png">
-      </a>
-      <div>☰</div>
-      <div>
-        <a href="#course">Course</a>
-        <a href="#work">My Work</a>
-        <a href="#trainer">Trainer</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#faq">FAQ</a>
-        <a href="#checkout" class="btn-primary">Join for ₹999</a>
-      </div>
+      <img alt="Speakifly Logo" src="logo.png">
+      <a href="https://rzp.io/rzp/wzjcRF6" class="cta-button" style="padding: 10px 20px; font-size: 1rem; width: auto; box-shadow: none;">Enrol Now</a>
     </nav>
   </header>
 
   <main>
-    <section id="top">
-      <div class="hero-container">
-        <div class="hero-text">
-          <div>ENGLISH COMMUNICATION FOR WORKING PROFESSIONALS</div>
-          
-          <h1>
-            Understand English…<br>
-            <span>but can’t speak?</span>
-          </h1>
+    <section class="hero container">
+      <div class="hero-content">
+        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: bold; font-size: 0.9rem; margin-bottom: 10px;">
+          For Working Professionals
+        </p>
+        <h1>Understand English…<br><span>but can’t speak?</span></h1>
+        <p style="font-size: 1.25rem; color: var(--text-main);">
+          Master professional communication with expert <strong>Guidance</strong>. Stop hesitating in meetings and start speaking with absolute clarity and confidence.
+        </p>
 
-          <p>
-            Improve your English communication, professional presence 
-            and confidence — with live learning, structured practice 
-            and skills you can actually use at work.
+        <div class="urgency-box">
+          <p><strong>🗓 Next Batch Starts:</strong> 14th September</p>
+          <p><strong>⏰ Schedule:</strong> Mon, Wed, Fri <em>(Timings flexible to students' choice)</em></p>
+          <p style="color: var(--accent-color); font-weight: bold; margin-top: 10px;">
+            ⚠️ Fast Filling: Only 20 seats available per batch
           </p>
-
-          <div class="batch-alert" style="background: #fdf5e6; border-left: 4px solid #ff9900; padding: 15px; margin: 20px 0;">
-            <p><strong>🗓 Next Batch Starts:</strong> 14th September</p>
-            <p><strong>⏰ Schedule:</strong> Mon, Wed, Fri <em>(Timings flexible to students' choice)</em></p>
-            <p style="color: #d93025; font-weight: bold;">⚠️ Only 20 seats available per batch</p>
-          </div>
-
-          <div class="hero-benefits">
-            <div>✓ Live Lectures</div>
-            <div>✓ Grammar to Fluency</div>
-            <div>✓ Speaking Practice</div>
-            <div>✓ Professional Skills</div>
-            <div>✓ 1 Year Access</div>
-          </div>
-
-          <div class="cta-group">
-            <a href="#checkout" class="btn-primary">Join the Batch - ₹999</a>
-            <p style="font-size: 14px; margin-top: 5px; font-weight: bold; color: #2e7d32;">
-              ⭐ Results guaranteed
-            </p>
-          </div>
         </div>
 
-        <div class="hero-image">
-          <img alt="Isha Shah – English Communication Trainer" src="isha-photo.png">
-          <div class="badge">
-            <strong>Learn. Practise. Apply.</strong>
-            <span>Build communication skills you can actually use in professional life.</span>
-          </div>
-        </div>
+        <a href="https://rzp.io/rzp/wzjcRF6" class="cta-button">Claim Your Seat - ₹999</a>
+        <span class="guarantee-text">⭐ Results guaranteed • Lowest Price</span>
+      </div>
+
+      <div class="hero-image">
+        <img alt="Isha Shah – English Communication Trainer" src="isha-photo.png">
       </div>
     </section>
 
-    <div class="highlights">
-      <div>
-        <div><strong>₹999</strong><span>One-time fee</span></div>
-        <div><strong>1 Year</strong><span>Learning access</span></div>
-        <div><strong>6 Skills</strong><span>Complete communication</span></div>
-        <div><strong>Flexible</strong><span>Mon/Wed/Fri Live classes</span></div>
-      </div>
-    </div>
-
-    <section id="course">
-      <div class="section-header">
-        <div>WHAT YOU'LL LEARN</div>
-        <h2>Everything you need to communicate better.</h2>
-      </div>
-      <div class="grid-container">
-        <div><h3>Basic Grammar</h3><p>Build a strong foundation in everyday English.</p></div>
-        <div><h3>Advanced Grammar</h3><p>Move beyond basic rules for natural communication.</p></div>
-        <div><h3>Writing Skills</h3><p>Improve emails and workplace writing.</p></div>
-        <div><h3>Speaking Skills</h3><p>Practise everyday conversations and fluency.</p></div>
-        <div><h3>Listening & Reading</h3><p>Strengthen comprehension.</p></div>
-        <div><h3>Pronunciation</h3><p>Learn through dedicated videos.</p></div>
-        <div><h3>Professional Etiquette</h3><p>Communicate professionally in meetings.</p></div>
-        <div><h3>Presentation Skills</h3><p>Structure ideas and present confidently.</p></div>
-        <div><h3>Personality Building</h3><p>Develop presence and confidence.</p></div>
-      </div>
-    </section>
-
-    <section id="work">
-      <div class="section-header">
-        <div>MY WORK</div>
-        <h2>Communication beyond the classroom.</h2>
-        <p>Helping professionals crack interviews and lead meetings fearlessly.</p>
-      </div>
-      <div class="work-gallery">
-        <img alt="Speakifly workshop session" src="workshop-1.jpg">
-        <img alt="Professional communication training" src="workshop-2.jpg">
-      </div>
-    </section>
-
-    <section id="trainer">
-      <div class="trainer-container">
-        <img alt="Isha Shah" src="isha-photo.png">
-        <div class="trainer-text">
-          <div>YOUR TRAINER</div>
-          <h2>Meet Isha Shah.</h2>
-          <p>I believe that knowing English and communicating confidently are two different things.</p>
-          <p>My approach focuses on making English practical — helping learners understand, practise and apply what they learn in real situations.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="checkout">
-      <div class="checkout-box">
-        <div>LIMITED-PRICE OFFER</div>
-        <h2>Your English can open more doors.</h2>
-        <p>Invest in communication skills that stay with you long after you finish the course.</p>
+    <section class="features">
+      <div class="container">
+        <h2>Complete Communication Modules</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto;">
+          This isn't just a grammar class. You get comprehensive learning materials, practice books, and live interactive lectures covering everything you need for the workplace.
+        </p>
         
-        <div style="margin: 20px 0;">
-          <h3 style="font-size: 32px; margin: 0;">₹999</h3>
-          <p>One-time course fee</p>
-          <p style="color: #2e7d32; font-weight: bold;">⭐ Results guaranteed</p>
+        <div class="grid">
+          <div class="card">
+            <h3>✓ Grammar to Fluency</h3>
+            <p>Clear concepts from basic to advanced grammar, tailored for natural speaking rather than just passing tests.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Live Speaking Practice</h3>
+            <p>Active participation sessions where you construct sentences on the spot and overcome stage fright.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Professional Etiquette</h3>
+            <p>Learn exactly how to write corporate emails, lead presentations, and handle workplace conversations.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Pronunciation & Listening</h3>
+            <p>Access specialized audio and video materials to neutralize your accent and sound incredibly professional.</p>
+          </div>
         </div>
-
-        <a href="YOUR_PAYMENT_LINK_HERE" class="btn-primary" style="display: block; text-align: center; padding: 15px; background: #000; color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px;">
-          Enrol Now for 14th Sept Batch
-        </a>
       </div>
     </section>
 
-  </main>
+    <section class="container trainer" style="padding-top: 100px;">
+      <img alt="Trainer Isha Shah" src="workshop-1.jpg">
+      <div>
+        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: bold; margin-bottom: 10px;">Your Trainer</p>
+        <h2>Meet Isha Shah</h2>
+        <p>
+          I believe that knowing English and communicating confidently are two very different things. 
+        </p>
+        <p>
+          At Speakifly, my approach focuses on making English practical. We don't just memorize rules; we practice real-life professional scenarios so you can apply what you learn immediately at your job.
+        </p>
+        <ul style="list-style: none; margin-top: 20px;">
+          <li style="margin-bottom: 10px; color: var(--text-main);"><strong>✓</strong> Expert in Professional Communication</li>
+          <li style="margin-bottom: 10px; color: var(--text-main);"><strong>✓</strong> Focuses on Practical Application</li>
+          <li style="margin-bottom: 10px; color: var(--text-main);"><strong>✓</strong> Interactive & Supportive Teaching Style</li>
+        </ul>
+      </div>
+    </section>
 
-  <footer>
-    <img alt="Speakifly" src="logo.png">
-    <p>© 2026 Speakifly. All rights reserved.</p>
-    <p>English Communication • Professional Skills • Confidence</p>
-  </footer>
+    <section style="background-color: var(--bg-color); padding: 40px 20px;">
+      <div class="pricing container">
+        <h2>Ready to transform your career?</h2>
+        <p>Get 1-year access to all materials, workbooks, and the complete live batch experience.</p>
+        
+        <div class="price-tag">
+          ₹999 <span>only</span>
+        </div>
+        
+        <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 30px;">
+          Lowest Price • Batch starts Sept 14th
+        </p>
 
-  <a aria-label="WhatsApp" href="https://wa.me/918154985089" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 15px; border-radius: 50%; text-decoration: none; font-size: 24px;">
-    ☎
-  </a>
-
-</body>
-</html>
+        <a href="https://rzp.io/rzp/wzjcRF6" class="cta-button" style="max-width: 100%;">
+          Complete Payment Securely
+        </a>
+        <span class="guarantee-text" style="font-size: 1rem; margin-top: 15px;">⭐ Results guaranteed</span>
+        
+        <div style="margin-top: 30px; font-size: 0.9rem; color: var(--text-light); border-top: 1px solid #E2E8F0; padding-top: 20px;">
+          Secure payment powered by <strong>Razorpay</strong>. You will receive batch access details immediately via email and WhatsApp upon successful payment.
