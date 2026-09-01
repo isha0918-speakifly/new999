@@ -1,300 +1,2214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Speakifly - English Communication for Professionals</title>
-  <style>
-    /* HIGH-CONVERTING CUSTOM CSS */
-    :root {
-      --primary-color: #0F172A; /* Deep professional navy */
-      --accent-color: #E11D48; /* High-conversion red/pink */
-      --accent-hover: #BE123C;
-      --bg-color: #F8FAFC;
-      --text-main: #334155;
-      --text-light: #64748B;
-      --success: #16A34A;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Speakifly | English Communication for Working Professionals</title>
+
+<meta name="description" content="Build confident English communication skills with Speakifly. Live classes, grammar, speaking, writing, pronunciation, presentation skills and more. Batch starts 14 September. Only 15 students per batch.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #101044;
+    background: #fbfaf7;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-tag {
+    color: #c8954c;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.08;
+    color: #101044;
+    margin-bottom: 18px;
+}
+
+.section-subtitle {
+    max-width: 680px;
+    color: #606078;
+    font-size: 17px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(251,250,247,0.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ece9e1;
+}
+
+.nav-inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #343451;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #101044;
+}
+
+.nav-cta {
+    background: #101044;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 9px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 70px 0 85px;
+    background:
+        radial-gradient(circle at 90% 20%, rgba(200,149,76,0.12), transparent 30%),
+        #fbfaf7;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 50px;
+    background: #f3eee5;
+    color: #8b622a;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(46px, 6vw, 76px);
+    line-height: 0.99;
+    letter-spacing: -2px;
+    color: #101044;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #b67b32;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #5d5d73;
+    max-width: 620px;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    border: none;
+    background: #101044;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(16,16,68,0.18);
+}
+
+.secondary-btn {
+    padding: 15px 23px;
+    border: 1px solid #d8d4ca;
+    border-radius: 10px;
+    color: #101044;
+    font-weight: 700;
+}
+
+.hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-point {
+    background: white;
+    border: 1px solid #e8e3d9;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #4f4f66;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 25px 60px rgba(20,20,50,0.12);
+}
+
+.hero-card {
+    position: absolute;
+    bottom: 25px;
+    left: -25px;
+    background: white;
+    padding: 20px;
+    width: 230px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(20,20,50,0.15);
+}
+
+.hero-card strong {
+    display: block;
+    font-size: 26px;
+    color: #101044;
+}
+
+.hero-card small {
+    color: #67677a;
+}
+
+/* =========================
+   BATCH STRIP
+========================= */
+
+.batch-strip {
+    background: #101044;
+    color: white;
+    padding: 20px 0;
+}
+
+.batch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.batch-item {
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.batch-item:last-child {
+    border-right: none;
+}
+
+.batch-item strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.batch-item span {
+    font-size: 13px;
+    color: #d8d8e6;
+}
+
+/* =========================
+   PROBLEM
+========================= */
+
+.problem {
+    background: white;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.problem-list {
+    display: grid;
+    gap: 14px;
+}
+
+.problem-item {
+    background: #fbfaf7;
+    border: 1px solid #ece8df;
+    padding: 18px 20px;
+    border-radius: 12px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.problem-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #efe4d3;
+    color: #9a6828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+/* =========================
+   COURSE
+========================= */
+
+.course {
+    background: #f4f1eb;
+}
+
+.course-grid {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.course-card {
+    background: white;
+    border: 1px solid #e7e2d8;
+    padding: 28px;
+    border-radius: 16px;
+    transition: 0.25s;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(20,20,50,0.08);
+}
+
+.course-number {
+    color: #c18a43;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    font-size: 20px;
+    margin-bottom: 9px;
+    color: #101044;
+}
+
+.course-card p {
+    color: #68687a;
+    font-size: 14px;
+}
+
+/* =========================
+   SCHEDULE
+========================= */
+
+.schedule {
+    background: white;
+}
+
+.schedule-box {
+    margin-top: 40px;
+    background: #101044;
+    color: white;
+    padding: 45px;
+    border-radius: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.schedule-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.schedule-box p {
+    color: #d7d7e5;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.day {
+    padding: 11px 15px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.schedule-highlight {
+    background: rgba(255,255,255,0.09);
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.schedule-highlight strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.schedule-highlight span {
+    color: #d5d5e2;
+    font-size: 14px;
+}
+
+/* =========================
+   WORKSHOP / WORK
+========================= */
+
+.work {
+    background: #fbfaf7;
+}
+
+.work-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.work-image {
+    height: 390px;
+    object-fit: cover;
+    border-radius: 18px;
+    width: 100%;
+}
+
+/* =========================
+   TRAINER
+========================= */
+
+.trainer {
+    background: white;
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.trainer-photo {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.trainer-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.trainer-content p {
+    color: #656579;
+    margin-bottom: 18px;
+}
+
+.trainer-points {
+    display: grid;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.trainer-point {
+    padding: 16px;
+    background: #f8f5ef;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* =========================
+   TRUST
+========================= */
+
+.trust {
+    background: #f4f1eb;
+}
+
+.trust-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.trust-card {
+    background: white;
+    padding: 27px;
+    border-radius: 16px;
+    border: 1px solid #e7e2d8;
+}
+
+.stars {
+    color: #c48b43;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.trust-card p {
+    color: #5d5d70;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.trust-card strong {
+    color: #101044;
+}
+
+/* =========================
+   TESTIMONIAL NOTICE
+========================= */
+
+.testimonial-note {
+    margin-top: 22px;
+    font-size: 12px;
+    color: #7a7a88;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price-section {
+    background: #101044;
+    color: white;
+}
+
+.price-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.price-box .section-tag {
+    color: #d9b47b;
+}
+
+.price-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 58px;
+    font-weight: 800;
+    margin: 20px 0 5px;
+}
+
+.price small {
+    font-size: 15px;
+    color: #cfcfde;
+}
+
+.price-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.price-feature {
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 9px 14px;
+    border-radius: 8px;
+    color: #dedee8;
+    font-size: 13px;
+}
+
+.price-box .primary-btn {
+    background: white;
+    color: #101044;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.enroll {
+    background: #fbfaf7;
+}
+
+.enroll-box {
+    max-width: 760px;
+    margin: auto;
+    background: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(20,20,50,0.08);
+    border: 1px solid #e8e3d9;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dcd8cf;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    border-color: #101044;
+}
+
+.form-note {
+    color: #777787;
+    font-size: 12px;
+    margin-top: 13px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    background: white;
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e4e1d9;
+}
+
+.faq-question {
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 21px 0;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 700;
+    color: #101044;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.faq-answer {
+    display: none;
+    color: #666678;
+    padding: 0 0 20px;
+    font-size: 15px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #f4f1eb;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #666678;
+}
+
+.contact-card a {
+    color: #101044;
+    font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0b0b30;
+    color: white;
+    padding: 45px 0 100px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-logo {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #bcbccd;
+    font-size: 13px;
+}
+
+/* =========================
+   STICKY MOBILE CTA
+========================= */
+
+.mobile-cta {
+    display: none;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+    display: none;
+    padding: 16px;
+    background: #edf7ef;
+    color: #256334;
+    border-radius: 9px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    .hero-grid,
+    .problem-grid,
+    .trainer-grid,
+    .schedule-box {
+        grid-template-columns: 1fr;
     }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        height: 430px;
+    }
+
+    .hero-card {
+        left: 15px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trainer-photo {
+        height: 500px;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
 
     body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
+        padding-bottom: 75px;
     }
 
-    /* Typography */
-    h1, h2, h3 { color: var(--primary-color); font-weight: 800; line-height: 1.2; }
-    h1 { font-size: 3rem; margin-bottom: 1rem; }
-    h1 span { color: var(--accent-color); }
-    h2 { font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; }
-    p { font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light); }
-
-    /* Layout & Sections */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    section { padding: 80px 0; }
-    
-    /* Navbar */
-    header {
-      background: white;
-      padding: 15px 0;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    nav img { height: 40px; }
-    
-    /* Buttons */
-    .cta-button {
-      display: inline-block;
-      background-color: var(--accent-color);
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 16px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 14px 0 rgba(225, 29, 72, 0.39);
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      max-width: 350px;
-    }
-    .cta-button:hover {
-      background-color: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px 0 rgba(225, 29, 72, 0.5);
-    }
-    .guarantee-text {
-      display: block;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--success);
-      font-weight: 700;
-      margin-top: 8px;
+    .section {
+        padding: 65px 0;
     }
 
-    /* Hero Section */
+    .navbar {
+        position: sticky;
+    }
+
+    .nav-inner {
+        min-height: 65px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .nav-cta {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
     .hero {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      padding: 60px 20px;
-      background: white;
+        padding: 40px 0 55px;
     }
-    .hero-content { flex: 1; }
-    .hero-image { flex: 1; text-align: right; position: relative; }
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
     .hero-image img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        height: 380px;
+        border-radius: 18px;
     }
 
-    /* Urgency Banner */
-    .urgency-box {
-      background: #FEF2F2;
-      border: 2px solid #FCA5A5;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 25px 0;
-    }
-    .urgency-box p { margin: 5px 0; color: #991B1B; font-size: 1.05rem; }
-    .urgency-box strong { color: #7F1D1D; }
-
-    /* Features Grid */
-    .features { background: var(--primary-color); color: white; padding: 60px 0; }
-    .features h2 { color: white; }
-    .features p { color: #CBD5E1; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .card h3 { color: white; margin-bottom: 10px; font-size: 1.3rem; }
-
-    /* Trainer Section */
-    .trainer {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-      background: white;
-    }
-    .trainer img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 12px;
+    .hero-card {
+        bottom: 15px;
+        left: 10px;
+        width: 205px;
+        padding: 15px;
     }
 
-    /* Pricing Section */
-    .pricing {
-      text-align: center;
-      background: white;
-      border-radius: 16px;
-      padding: 60px 40px;
-      margin: 80px auto;
-      max-width: 600px;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
-      border: 1px solid #E2E8F0;
+    .hero h1 {
+        font-size: 45px;
+        letter-spacing: -1px;
     }
-    .price-tag { font-size: 4rem; font-weight: 900; color: var(--primary-color); margin: 20px 0; }
-    .price-tag span { font-size: 1.5rem; color: var(--text-light); }
 
-    /* Floating WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      text-decoration: none;
-      z-index: 1000;
-      transition: transform 0.3s;
+    .hero-text {
+        font-size: 16px;
     }
-    .whatsapp-float:hover { transform: scale(1.1); }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      .hero, .trainer { flex-direction: column; text-align: center; }
-      .hero-image { text-align: center; }
-      h1 { font-size: 2.2rem; }
-      .cta-button { width: 100%; }
-      .urgency-box { text-align: left; }
+    .hero-actions {
+        flex-direction: column;
     }
-  </style>
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .batch-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .batch-item {
+        border-right: none;
+    }
+
+    .batch-item strong {
+        font-size: 16px;
+    }
+
+    .batch-item span {
+        font-size: 11px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-image {
+        height: 260px;
+    }
+
+    .trainer-photo {
+        height: 430px;
+    }
+
+    .trainer-content h3 {
+        font-size: 34px;
+    }
+
+    .schedule-box {
+        padding: 28px 22px;
+    }
+
+    .enroll-box {
+        padding: 27px 20px;
+    }
+
+    .price {
+        font-size: 48px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+    }
+
+    .mobile-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+        background: white;
+        padding: 10px 12px;
+        box-shadow: 0 -5px 25px rgba(0,0,0,0.12);
+        gap: 10px;
+        align-items: center;
+    }
+
+    .mobile-cta-info {
+        flex: 1;
+    }
+
+    .mobile-cta-info strong {
+        display: block;
+        font-size: 15px;
+        color: #101044;
+    }
+
+    .mobile-cta-info span {
+        font-size: 11px;
+        color: #6d6d7b;
+    }
+
+    .mobile-cta .primary-btn {
+        width: auto;
+        padding: 13px 17px;
+        font-size: 14px;
+    }
+}
+
+</style>
 </head>
+
+
 <body>
 
-  <header>
-    <nav>
-      <img alt="Speakifly Logo" src="logo.png">
-      <a href="https://rzp.io/rzp/wzjcRF6" class="cta-button" style="padding: 10px 20px; font-size: 1rem; width: auto; box-shadow: none;">Enrol Now</a>
-    </nav>
-  </header>
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-  <main>
-    <section class="hero container">
-      <div class="hero-content">
-        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: bold; font-size: 0.9rem; margin-bottom: 10px;">
-          For Working Professionals
-        </p>
-        <h1>Understand English…<br><span>but can’t speak?</span></h1>
-        <p style="font-size: 1.25rem; color: var(--text-main);">
-          Master professional communication with expert <strong>Guidance</strong>. Stop hesitating in meetings and start speaking with absolute clarity and confidence.
-        </p>
+<nav class="navbar">
+    <div class="container nav-inner">
 
-        <div class="urgency-box">
-          <p><strong>🗓 Next Batch Starts:</strong> 14th September</p>
-          <p><strong>⏰ Schedule:</strong> Mon, Wed, Fri <em>(Timings flexible to students' choice)</em></p>
-          <p style="color: var(--accent-color); font-weight: bold; margin-top: 10px;">
-            ⚠️ Fast Filling: Only 20 seats available per batch
-          </p>
-        </div>
-
-        <a href="https://rzp.io/rzp/wzjcRF6" class="cta-button">Claim Your Seat - ₹999</a>
-        <span class="guarantee-text">⭐ Results guaranteed • Lowest Price</span>
-      </div>
-
-      <div class="hero-image">
-        <img alt="Isha Shah – English Communication Trainer" src="isha-photo.png">
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="container">
-        <h2>Complete Communication Modules</h2>
-        <p style="text-align: center; max-width: 700px; margin: 0 auto;">
-          This isn't just a grammar class. You get comprehensive learning materials, practice books, and live interactive lectures covering everything you need for the workplace.
-        </p>
-        
-        <div class="grid">
-          <div class="card">
-            <h3>✓ Grammar to Fluency</h3>
-            <p>Clear concepts from basic to advanced grammar, tailored for natural speaking rather than just passing tests.</p>
-          </div>
-          <div class="card">
-            <h3>✓ Live Speaking Practice</h3>
-            <p>Active participation sessions where you construct sentences on the spot and overcome stage fright.</p>
-          </div>
-          <div class="card">
-            <h3>✓ Professional Etiquette</h3>
-            <p>Learn exactly how to write corporate emails, lead presentations, and handle workplace conversations.</p>
-          </div>
-          <div class="card">
-            <h3>✓ Pronunciation & Listening</h3>
-            <p>Access specialized audio and video materials to neutralize your accent and sound incredibly professional.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container trainer" style="padding-top: 100px;">
-      <img alt="Trainer Isha Shah" src="workshop-1.jpg">
-      <div>
-        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: bold; margin-bottom: 10px;">Your Trainer</p>
-        <h2>Meet Isha Shah</h2>
-        <p>
-          I believe that knowing English and communicating confidently are two very different things. 
-        </p>
-        <p>
-          At Speakifly, my approach focuses on making English practical. We don't just memorize rules; we practice real-life professional scenarios so you can apply what you learn immediately at your job.
-        </p>
-        <ul style="list-style: none; margin-top: 20px;">
-          <li style="margin-bottom: 10px; color: var(--text-main);"><strong>✓</strong> Expert in Professional Communication</li>
-          <li style="margin-bottom: 10px; color: var(--text-main);"><strong>✓</strong> Focuses on Practical Application</li>
-          <li style="margin-bottom: 10px; color: var(--text-main);"><strong>✓</strong> Interactive & Supportive Teaching Style</li>
-        </ul>
-      </div>
-    </section>
-
-    <section style="background-color: var(--bg-color); padding: 40px 20px;">
-      <div class="pricing container">
-        <h2>Ready to transform your career?</h2>
-        <p>Get 1-year access to all materials, workbooks, and the complete live batch experience.</p>
-        
-        <div class="price-tag">
-          ₹999 <span>only</span>
-        </div>
-        
-        <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 30px;">
-          Lowest Price • Batch starts Sept 14th
-        </p>
-
-        <a href="https://rzp.io/rzp/wzjcRF6" class="cta-button" style="max-width: 100%;">
-          Complete Payment Securely
+        <a href="#top">
+            <img src="logo.png" alt="Speakifly" class="logo">
         </a>
-        <span class="guarantee-text" style="font-size: 1rem; margin-top: 15px;">⭐ Results guaranteed</span>
-        
-        <div style="margin-top: 30px; font-size: 0.9rem; color: var(--text-light); border-top: 1px solid #E2E8F0; padding-top: 20px;">
-          Secure payment powered by <strong>Razorpay</strong>. You will receive batch access details immediately via email and WhatsApp upon successful payment.
+
+        <div class="nav-links">
+            <a href="#course">Course</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#trainer">Trainer</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#faq">FAQ</a>
+        </div>
+
+        <a href="#enroll" class="nav-cta">
+            Join for ₹999
+        </a>
+
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="top">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="hero-badge">
+                ✦ New Batch Starts 14 September
+            </div>
+
+            <h1>
+                Speak English with
+                <span>confidence.</span>
+            </h1>
+
+            <p class="hero-text">
+                A practical English communication program designed for
+                working professionals who want to communicate clearly,
+                confidently and professionally — at work and in everyday life.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#enroll" class="primary-btn">
+                    Join the Course — ₹999
+                </a>
+
+                <a href="#course" class="secondary-btn">
+                    See What's Included
+                </a>
+
+            </div>
+
+            <div class="hero-points">
+
+                <div class="hero-point">
+                    ✓ Live Classes
+                </div>
+
+                <div class="hero-point">
+                    ✓ 1 Year Access
+                </div>
+
+                <div class="hero-point">
+                    ✓ Only 15 Students
+                </div>
+
+                <div class="hero-point">
+                    ✓ Practice Material
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img src="isha-photo.png"
+                 alt="Isha Shah - English Communication Trainer">
+
+            <div class="hero-card">
+
+                <strong>₹999</strong>
+
+                <small>
+                    Complete English Communication Program
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BATCH STRIP
+========================= -->
+
+<section class="batch-strip">
+
+    <div class="container batch-grid">
+
+        <div class="batch-item">
+            <strong>14 September</strong>
+            <span>Batch Starts</span>
+        </div>
+
+        <div class="batch-item">
+            <strong>Mon • Wed • Fri</strong>
+            <span>Live Classes</span>
+        </div>
+
+        <div class="batch-item">
+            <strong>Flexible</strong>
+            <span>Class Timings</span>
+        </div>
+
+        <div class="batch-item">
+            <strong>15 Students</strong>
+            <span>Per Batch</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROBLEM
+========================= -->
+
+<section class="section problem">
+
+    <div class="container problem-grid">
+
+        <div>
+
+            <div class="section-tag">
+                Sound familiar?
+            </div>
+
+            <h2 class="section-title">
+                Knowing English is not the same as communicating confidently.
+            </h2>
+
+            <p class="section-subtitle">
+                Many professionals understand English but struggle when
+                they actually have to speak, write, present or participate
+                in professional conversations.
+            </p>
+
+        </div>
+
+
+        <div class="problem-list">
+
+            <div class="problem-item">
+                <div class="problem-icon">✓</div>
+                <div>
+                    <strong>You know grammar but hesitate while speaking.</strong>
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <div class="problem-icon">✓</div>
+                <div>
+                    <strong>You struggle to find the right words quickly.</strong>
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <div class="problem-icon">✓</div>
+                <div>
+                    <strong>You want to sound more professional at work.</strong>
+                </div>
+            </div>
+
+            <div class="problem-item">
+                <div class="problem-icon">✓</div>
+                <div>
+                    <strong>You want more confidence during presentations and conversations.</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COURSE
+========================= -->
+
+<section class="section course" id="course">
+
+    <div class="container">
+
+        <div class="section-tag">
+            What's inside
+        </div>
+
+        <h2 class="section-title">
+            More than just a grammar course.
+        </h2>
+
+        <p class="section-subtitle">
+            Learn the English you actually need to use —
+            from understanding grammar to speaking confidently
+            in professional situations.
+        </p>
+
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <div class="course-number">01</div>
+                <h3>Basic Grammar</h3>
+                <p>
+                    Build a strong foundation in sentence structure,
+                    tenses, articles, prepositions and essential grammar.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">02</div>
+                <h3>Advanced Grammar</h3>
+                <p>
+                    Understand more advanced structures and learn how
+                    to use them naturally while communicating.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">03</div>
+                <h3>Speaking Skills</h3>
+                <p>
+                    Practice everyday and professional conversations
+                    so that you can express yourself more comfortably.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">04</div>
+                <h3>Writing Skills</h3>
+                <p>
+                    Improve sentence construction, clarity,
+                    vocabulary and professional writing.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">05</div>
+                <h3>Listening Skills</h3>
+                <p>
+                    Develop your ability to understand English
+                    in conversations and professional situations.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">06</div>
+                <h3>Reading Skills</h3>
+                <p>
+                    Improve comprehension, vocabulary and reading
+                    confidence through guided practice.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">07</div>
+                <h3>Pronunciation</h3>
+                <p>
+                    Access focused videos designed to help you
+                    improve pronunciation and clarity.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">08</div>
+                <h3>Professional Etiquette</h3>
+                <p>
+                    Learn how to communicate appropriately and
+                    professionally in workplace situations.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-number">09</div>
+                <h3>Presentation Skills</h3>
+                <p>
+                    Learn how to organise your ideas, speak clearly
+                    and present yourself with confidence.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MATERIALS
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-tag">
+            Practice beyond class
+        </div>
+
+        <h2 class="section-title">
+            Learn. Practise. Apply.
+        </h2>
+
+        <p class="section-subtitle">
+            Your learning doesn't stop when the live class ends.
+            You get additional resources to practise at your own pace.
+        </p>
+
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <h3>Practice Books</h3>
+                <p>
+                    Structured practice material to reinforce what
+                    you learn during live classes.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Workbooks</h3>
+                <p>
+                    Exercises and activities designed to turn
+                    concepts into practical skills.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Novels</h3>
+                <p>
+                    Build vocabulary and reading confidence through
+                    guided reading material.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Story Books</h3>
+                <p>
+                    Improve reading and comprehension while engaging
+                    with interesting stories.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Pronunciation Videos</h3>
+                <p>
+                    Revisit pronunciation concepts whenever
+                    you need additional practice.
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>1 Year Learning Access</h3>
+                <p>
+                    Continue revising and learning with access
+                    to your course resources for one year.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCHEDULE
+========================= -->
+
+<section class="section schedule" id="schedule">
+
+    <div class="container">
+
+        <div class="section-tag">
+            Live learning
+        </div>
+
+        <h2 class="section-title">
+            A schedule designed around working professionals.
+        </h2>
+
+        <div class="schedule-box">
+
+            <div>
+
+                <h3>Live Classes</h3>
+
+                <p>
+                    Attend live sessions three days a week and
+                    practise what you learn with guidance.
+                </p>
+
+                <div class="days">
+
+                    <div class="day">Monday</div>
+                    <div class="day">Wednesday</div>
+                    <div class="day">Friday</div>
+
+                </div>
+
+                <p>
+                    <strong>Timings are flexible</strong> and can be
+                    decided based on the students' convenience.
+                </p>
+
+            </div>
+
+
+            <div class="schedule-highlight">
+
+                <strong>14 September 2026</strong>
+
+                <span>
+                    New batch begins
+                </span>
+
+                <br><br>
+
+                <strong>Only 15 students</strong>
+
+                <span>
+                    Limited batch size for a more focused learning experience.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORKSHOP IMAGES
+========================= -->
+
+<section class="section work">
+
+    <div class="container">
+
+        <div class="section-tag">
+            Training in action
+        </div>
+
+        <h2 class="section-title">
+            Communication is a skill you practise.
+        </h2>
+
+        <p class="section-subtitle">
+            These moments reflect practical training, workshops
+            and professional communication sessions.
+        </p>
+
+
+        <div class="work-grid">
+
+            <img src="workshop-1.jpg"
+                 alt="Speakifly communication workshop"
+                 class="work-image">
+
+            <img src="workshop-2.jpg"
+                 alt="Professional communication training session"
+                 class="work-image">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TRAINER
+========================= -->
+
+<section class="section trainer" id="trainer">
+
+    <div class="container trainer-grid">
+
+        <div>
+
+            <img src="isha-photo.png"
+                 alt="Isha Shah - English Communication Trainer"
+                 class="trainer-photo">
+
+        </div>
+
+
+        <div class="trainer-content">
+
+            <div class="section-tag">
+                Your Trainer
+            </div>
+
+            <h3>
+                Meet Isha Shah
+            </h3>
+
+            <p>
+                I believe that knowing English and being able to
+                communicate confidently are two different things.
+            </p>
+
+            <p>
+                My approach focuses on making English practical —
+                helping learners understand, practise and apply
+                what they learn in real situations.
+            </p>
+
+            <p>
+                This program combines grammar, speaking, writing,
+                listening, reading and professional communication
+                so that you develop skills you can actually use.
+            </p>
+
+
+            <div class="trainer-points">
+
+                <div class="trainer-point">
+                    ✓ English Communication & Fluency
+                </div>
+
+                <div class="trainer-point">
+                    ✓ Professional Communication
+                </div>
+
+                <div class="trainer-point">
+                    ✓ Presentation & Personality Skills
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section class="section trust" id="reviews">
+
+    <div class="container">
+
+        <div class="section-tag">
+            Student experiences
+        </div>
+
+        <h2 class="section-title">
+            What learners say.
+        </h2>
+
+        <p class="section-subtitle">
+            Add your genuine student feedback here to help future
+            learners understand what the experience is like.
+        </p>
+
+
+        <div class="trust-grid">
+
+            <div class="trust-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Add a genuine review from one of your students here.
+                    Keep it specific about the improvement they experienced.”
+                </p>
+
+                <strong>
+                    — Student Name
+                </strong>
+
+            </div>
+
+
+            <div class="trust-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Add another genuine student experience here,
+                    preferably mentioning speaking confidence,
+                    grammar or workplace communication.”
+                </p>
+
+                <strong>
+                    — Student Name
+                </strong>
+
+            </div>
+
+
+            <div class="trust-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    “Add a genuine testimonial here about the
+                    practical learning experience and live classes.”
+                </p>
+
+                <strong>
+                    — Student Name
+                </strong>
+
+            </div>
+
+        </div>
+
+        <p class="testimonial-note">
+            Replace the three sample review spaces above with real student
+            feedback and the students' names before publishing.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRICE / CTA
+========================= -->
+
+<section class="section price-section">
+
+    <div class="container price-box">
+
+        <div class="section-tag">
+            Start your transformation
+        </div>
+
+        <h2>
+            One course. Practical English skills for work and life.
+        </h2>
+
+        <div class="price">
+            ₹999
+        </div>
+
+        <small>
+            Complete program
+        </small>
+
+
+        <div class="price-features">
+
+            <div class="price-feature">Live Classes</div>
+            <div class="price-feature">Grammar</div>
+            <div class="price-feature">Speaking</div>
+            <div class="price-feature">Writing</div>
+            <div class="price-feature">Listening</div>
+            <div class="price-feature">Reading</div>
+            <div class="price-feature">Pronunciation</div>
+            <div class="price-feature">Professional Skills</div>
+            <div class="price-feature">1 Year Access</div>
+
+        </div>
+
+
+        <a href="#enroll" class="primary-btn">
+            Join the 14 September Batch
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ENROLL FORM
+========================= -->
+
+<section class="section enroll" id="enroll">
+
+    <div class="container">
+
+        <div class="enroll-box">
+
+            <div class="section-tag">
+                Reserve your place
+            </div>
+
+            <h2 class="section-title">
+                Ready to communicate with more confidence?
+            </h2>
+
+            <p class="section-subtitle">
+                Enter your details below. You'll be taken to the secure
+                payment page after submitting the form.
+            </p>
+
+            <br>
+
+
+            <form id="enrollForm">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="whatsapp">
+                        WhatsApp Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="whatsapp"
+                        name="whatsapp"
+                        placeholder="Enter your WhatsApp number"
+                        pattern="[0-9+\-\s]{10,15}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                    style="width:100%;"
+                >
+                    Continue to Secure Payment — ₹999
+                </button>
+
+
+                <div class="success-message" id="successMessage">
+                    Details received. Redirecting you to secure payment...
+                </div>
+
+
+                <p class="form-note">
+                    Your information is used to process your course enrolment
+                    and contact you regarding the batch.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section faq" id="faq">
+
+    <div class="container">
+
+        <div style="text-align:center;">
+
+            <div class="section-tag">
+                Questions
+            </div>
+
+            <h2 class="section-title">
+                Frequently asked questions
+            </h2>
+
+        </div>
+
+
+        <div class="faq-list">
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Who is this course for?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    This program is designed especially for working
+                    professionals and adults who want to improve their
+                    English communication and professional confidence.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    When does the batch start?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    The new batch starts on 14 September 2026.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    On which days are the live classes?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Live classes are conducted on Monday, Wednesday
+                    and Friday.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    What time will the classes be conducted?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    The class timings are flexible and will be decided
+                    according to the students' convenience.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    How many students will be in one batch?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Each batch is limited to only 15 students.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    How long will I have access to the course?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    You receive 1 year of learning access to the
+                    course resources.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    What is the course fee?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    The complete program is available for ₹999.
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    What happens after I fill the form?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    After submitting your name, WhatsApp number and
+                    email address, you will be redirected to the secure
+                    Razorpay payment page to complete your enrolment.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact">
+
+    <div class="container">
+
+        <div class="section-tag">
+            Need help?
+        </div>
+
+        <h2 class="section-title">
+            Have a question before joining?
+        </h2>
+
+
+        <div class="contact-box">
+
+            <div class="contact-card">
+
+                <h3>WhatsApp</h3>
+
+                <p>
+                    Speak directly regarding the course and batch.
+                </p>
+
+                <br>
+
+                <a href="https://wa.me/918154985089" target="_blank">
+                    +91 8154985089
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>Email</h3>
+
+                <p>
+                    Send your questions by email.
+                </p>
+
+                <br>
+
+                <a href="mailto:ishashah@speakiflyinstitute.com">
+                    ishashah@speakiflyinstitute.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <img src="logo.png"
+                 alt="Speakifly"
+                 class="footer-logo">
+
+            <p>
+                Practical English communication for
+                professional and everyday life.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                © 2026 Speakifly. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     MOBILE STICKY CTA
+========================= -->
+
+<div class="mobile-cta">
+
+    <div class="mobile-cta-info">
+
+        <strong>
+            Join the 14 Sept Batch
+        </strong>
+
+        <span>
+            ₹999 • Only 15 students
+        </span>
+
+    </div>
+
+    <a href="#enroll" class="primary-btn">
+        Join Course
+    </a>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   RAZORPAY PAYMENT
+========================= */
+
+const paymentLink = "https://rzp.io/rzp/wzjcRF6";
+
+const form = document.getElementById("enrollForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const whatsapp = document.getElementById("whatsapp").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if (!name || !whatsapp || !email) {
+        alert("Please fill in all the details.");
+        return;
+    }
+
+    /*
+      Front-end validation is complete.
+      Redirecting to Razorpay payment page.
+    */
+
+    successMessage.style.display = "block";
+
+    setTimeout(function() {
+
+        window.location.href = paymentLink;
+
+    }, 800);
+
+});
+
+
+/* =========================
+   FAQ ACCORDION
+========================= */
+
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(function(question) {
+
+    question.addEventListener("click", function() {
+
+        const currentItem = question.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(function(item) {
+
+            if (item !== currentItem) {
+                item.classList.remove("active");
+
+                const symbol = item.querySelector(".faq-question span");
+
+                if (symbol) {
+                    symbol.textContent = "+";
+                }
+            }
+
+        });
+
+
+        currentItem.classList.toggle("active");
+
+        const symbol = question.querySelector("span");
+
+        if (currentItem.classList.contains("active")) {
+            symbol.textContent = "−";
+        } else {
+            symbol.textContent = "+";
+        }
+
+    });
+
+});
+
+
+/* =========================
+   SMOOTH NAVIGATION
+========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+
+    anchor.addEventListener("click", function(event) {
+
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
